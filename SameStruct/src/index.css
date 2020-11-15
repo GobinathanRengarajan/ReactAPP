@@ -1,0 +1,289 @@
+@font-face {
+  font-family: 'Apercu Pro';
+  src: url('./Font/ApercuPro.eot');
+  src: local('Apercu Pro'), local('ApercuPro'),
+      url('./Font/ApercuPro.eot?#iefix') format('embedded-opentype'),
+      url('./Font/ApercuPro.woff2') format('woff2'),
+      url('./Font/ApercuPro.woff') format('woff'),
+      url('./Font/ApercuPro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Apercu Pro';
+  src: url('./Font/ApercuPro-MediumItalic.eot');
+  src: local('Apercu Pro Medium Italic'), local('ApercuPro-MediumItalic'),
+      url('./Font/ApercuPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+      url('./Font/ApercuPro-MediumItalic.woff2') format('woff2'),
+      url('./Font/ApercuPro-MediumItalic.woff') format('woff'),
+      url('./Font/ApercuPro-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Apercu Pro';
+  src: url('./Font/ApercuPro-Italic.eot');
+  src: local('Apercu Pro Italic'), local('ApercuPro-Italic'),
+      url('./Font/ApercuPro-Italic.eot?#iefix') format('embedded-opentype'),
+      url('./Font/ApercuPro-Italic.woff2') format('woff2'),
+      url('./Font/ApercuPro-Italic.woff') format('woff'),
+      url('./Font/ApercuPro-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Apercu Pro';
+  src: url('./Font/ApercuPro-BoldItalic.eot');
+  src: local('Apercu Pro Bold Italic'), local('ApercuPro-BoldItalic'),
+      url('./Font/ApercuPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('./Font/ApercuPro-BoldItalic.woff2') format('woff2'),
+      url('./Font/ApercuPro-BoldItalic.woff') format('woff'),
+      url('./Font/ApercuPro-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Apercu Pro';
+  src: url('./Font/ApercuPro-Mono.eot');
+  src: local('Apercu Pro Mono'), local('ApercuPro-Mono'),
+      url('./Font/ApercuPro-Mono.eot?#iefix') format('embedded-opentype'),
+      url('./Font/ApercuPro-Mono.woff2') format('woff2'),
+      url('./Font/ApercuPro-Mono.woff') format('woff'),
+      url('./Font/ApercuPro-Mono.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Apercu Pro';
+  src: url('./Font/ApercuPro-Bold.eot');
+  src: local('Apercu Pro Bold'), local('ApercuPro-Bold'),
+      url('./Font/ApercuPro-Bold.eot?#iefix') format('embedded-opentype'),
+      url('./Font/ApercuPro-Bold.woff2') format('woff2'),
+      url('./Font/ApercuPro-Bold.woff') format('woff'),
+      url('./Font/ApercuPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Apercu Pro';
+  src: url('Font/ApercuPro-Medium.eot');
+  src: local('Apercu Pro Medium'), local('ApercuPro-Medium'),
+      url('Font/ApercuPro-Medium.eot?#iefix') format('embedded-opentype'),
+      url('Font/ApercuPro-Medium.woff2') format('woff2'),
+      url('Font/ApercuPro-Medium.woff') format('woff'),
+      url('Font/ApercuPro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'Apercu Pro' , sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Apercu Pro' , sans-serif;
+}
+
+.logo {
+  float: left;
+  height: 60px;
+  width: 60px;
+}
+
+.full-width {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  display: block;
+}
+
+.MenuTitle {
+  position: absolute;
+  top: 25px;
+  left: 60px;
+  text-transform: uppercase;
+  color: #202121;
+  transition: all 0.3s ease-in-out;
+  font-weight: 400;
+}
+
+
+#menuToggle
+{
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;  
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 4px;
+  position: relative;
+  background: #202121;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 3px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -50px -15px;
+  padding: 50px 0px;
+  background:#f4f7f6;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  min-height: 840px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  position: relative;
+  display: block;
+  padding: 24px 36px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #202121;
+  cursor: pointer;
+  background: #f4f7f6;
+  border-bottom: 1px solid #E6EAEA;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#menu li:hover {
+  background-color: #fcfcfc;
+  transition: background 0.3s ease-in-out;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+  margin: -50px -15px;
+    padding: 50px 0px;
+}
+
+.header {
+  position: relative;
+  height: 60px;
+  background: #f4f7f6;
+  width: 100%;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  z-index: 302;
+  transition: background 0.3s;
+}
+
+nav {
+  height: 60px;
+  border-right: 1px solid #cdcdcd;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.Logo {
+  position: relative;
+  font-size: 16px;
+  color: #292961;
+  font-weight: bold;
+  text-align: center;
+}
+.nopad {
+  padding: 0px !important;
+}
+.logout {
+  display: flex;
+  height: 60px;
+  border-left: 1px solid #cdcdcd;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  align-items: center;
+  justify-content: center;
+}
+.logout i {
+  color: #202121;
+  font-size: 25px;
+  position: absolute;
+  line-height: 60px;
+  right: 40px;
+}
+.Logo img {
+  width: 60px;
+  height: 100%;
+}
